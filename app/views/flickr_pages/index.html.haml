@@ -1,0 +1,12 @@
+%h1
+  = "#{params[:tag]}" if params[:tag]
+  Photo Gallery
+
+%ul#photosets
+  /= get_photosets
+  = get_tags
+    
+#photos
+  = render 'photos'
+
+= will_paginate @results

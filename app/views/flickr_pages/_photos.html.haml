@@ -1,0 +1,5 @@
+%ul
+  - for photo in @results
+    %li
+      %a{ :href => "#{photo.url(:medium)}", :rel => "brewgrass", :class => "group" }
+        = image_tag photo.url(:square)

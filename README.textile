@@ -1,0 +1,34 @@
+h1. Spree Flickr Photos Extension
+
+A quick-and-dirty extension that allows you to add paginated Flickr Galleries to a Spree store.
+
+
+h2. Requirements
+
+<p>*Gems*<br />
+Flickr_fu, "http://github.com/commonthread/flickr_fu":http://github.com/commonthread/flickr_fu<br/>
+Will_Paginate, "http://wiki.github.com/mislav/will_paginate":http://wiki.github.com/mislav/will_paginate</p>
+
+h1. How to Install
+
+Place the flickr_pages_ extension in vendor/extensions
+<pre><code>
+  git://github.com/bcalloway/spree-flickr-pages.git vender/extensions/flickr_pages
+</code></pre>
+
+
+h2. How to Use
+
+As per the flickr_fu instructions, place a file called flickr.yml in the config directory that contains the following information:
+<pre><code>
+  key: abc123abc123abc123abc123abc123abc123abc123abc123abc #your api key
+  secret: abc123abc123abc #your secret key
+</code></pre>
+
+In order to pull the desired photos from your Flickr account, route to this uri:<code>/photos</code>
+
+In order to show a gallery of tagged photos, route to this uri: <code>/photos/:tag</code> where the tag param is the tag you with to show.
+
+You can also use setnames instead of tags if you wish.  Just look through the code and you'll see how to accomplish this.
+
+Copyright (c) 2010 Brandon Calloway, released under the MIT License
